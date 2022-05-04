@@ -1,12 +1,16 @@
-[
-    {
-        "name": "Sandra",
-        "password": "123456",
-        "email": "sandra@gmail.com"
-    },
-    {
-        "name": "Pato",
-        "password": "654321",
-        "email": "pato@hotmail.com"
-    }
-]
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "Sandra",
+            "password": "123456",
+            "email": "sandra@gmail.com"
+        },
+        {
+            "id": 2,
+            "name": "Pato",
+            "password": "654321",
+            "email": "pato@hotmail.com"
+        }
+    ]
+}
