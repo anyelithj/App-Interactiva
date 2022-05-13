@@ -1,0 +1,24 @@
+{
+  "categoria": [
+    {
+      "id": 1,
+      "name": "animals",
+      "img": "img/animals.jpg"
+    },
+    {
+      "id": 2,
+      "name": "food",
+      "img": "img/food.jpg"
+    },
+    {
+      "id": 3,
+      "name": "quiz",
+      "img": "img/quiz.jpg"
+    },
+    {
+      "id": 4,
+      "name": "family",
+      "img": "img/family.jpg"
+    }
+  ]
+}
