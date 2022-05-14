@@ -9,16 +9,21 @@ for(let li of carrusel.querySelectorAll('li')) {
 }
 
 /* configuración */
-let width = 530; // ancho de las imágenes
-let count = 2; // conteo de las imágenes visibles
-
+let count=0;
 let list = carrusel.querySelector('ul');
 let listElems = carrusel.querySelectorAll('li');
-
+let width;
 
 let position = 0; // posición del desplazamiento del carrusel
 
 carrusel.querySelector('.prev').onclick = function() {
+  const img2 = document.getElementById('1'); // ancho de la primera imagen
+   width = img2.clientWidth
+  if(width <= 250){
+    count = 1;
+  }else{
+    count = 2; // conteo de las imágenes visibles
+  }
   // desplazamiento izquierdo
   position += width * count;
   // no podemos mover demasiado a la izquierda, se acaban las imágenes
@@ -27,13 +32,17 @@ carrusel.querySelector('.prev').onclick = function() {
 };
 
 carrusel.querySelector('.next').onclick = function() {
+  const img3 = document.getElementById('1'); // ancho de la primera imagen
+  width = img3.clientWidth;
+  if(width <= 250){
+    count = 1;
+  }else{
+    count = 2; // conteo de las imágenes visibles
+  }
   // desplazamiento derecho
   position -= width * count;
- // console.log('position',position);
   // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
   position = Math.max(position, -width * (listElems.length - count));
-  console.log('listElems.length',listElems.length);
-  console.log('position',position);
   list.style.marginLeft = position + 'px';
 };
 

@@ -1,6 +1,6 @@
 *{
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
 body {
@@ -15,97 +15,219 @@ body {
             font-family: calibri;
   }
 
+  .classNav{
+    background-color: #e3f2fd;
+  }
+  
+  .contenedor{
+      justify-content: center;
+      display: grid;
+      margin: 20%;
+  }
 
-/************Home Carrusel***************/
-.contenedor{
-    justify-content: center;
-    display: grid;
-    padding-top: 15%;
+  .carrusel {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    padding: 10px 40px;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background: #eee;
+  }
+  
+  .carrusel img {
+    width: 200px;
+    height: 130px;
+    display: block;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    background: #ddd;
+    border-radius: 15px;
+    border: 1px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    color: #444;
+    display: block;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    background: #ccc;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 7px;
+  }
+  
+  .next {
+    right: 7px;
+  }
+  
+  .gallery {
+    width: 200px;
+    overflow: hidden;
+  }
+  
+  .gallery ul {
+    height: 230px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    font-size: 0;
+  }
+  
+  .gallery li {
+    display: inline-block;
+  }
+/*****************Responsive Carrusel**********************/
+@media (min-width: 576px) {
+  .contenedor{
+    margin: 20%;
 }
-
 .carrusel {
-  position: relative;
-  width: 100%;
-  padding: 10px 40px;
-  border: 1px solid #CCC;
-  border-radius: 15px;
-  background: #eee;
+  width: 50%;
+  height: 60%;
+}
+.gallery {
+  width: 350px;
 }
 
 .carrusel img {
+  width: 250px;
+  height: 170px;
+}
+
+}
+
+@media (min-width: 768px) {  
+  .contenedor{
+  margin: 15%;
+}
+.carrusel {
+  width: 70%;
+  height: 90%;
+}
+.gallery {
+  width: 750px;
+}
+.carrusel img {
   width: 530px;
   height: 230px;
-  display: block;
 }
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  padding: 0;
-  background: #ddd;
-  border-radius: 15px;
-  border: 1px solid gray;
-  font-size: 24px;
-  line-height: 24px;
-  color: #444;
-  display: block;
 }
-
-.arrow:focus {
-  outline: none;
+@media (min-width: 992px) {
+  .contenedor{
+    margin: 10%;
+  }
+  .carrusel {
+    width: 100%;
+    height: 100%;
+  }
+  .gallery {
+    width: 1050px;
+  }
+  .carrusel img {
+    width: 530px;
+    height: 230px;
+  }
 }
-
-.arrow:hover {
-  background: #ccc;
-  cursor: pointer;
-}
-
-.prev {
-  left: 7px;
-}
-
-.next {
-  right: 7px;
-}
-
-.gallery {
-  width: 1050px;
-  overflow: hidden;
-}
-
-.gallery ul {
-  height: 230px;
-  width: 9999px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transition: margin-left 250ms;
-  font-size: 0;
-}
-
-.gallery li {
-  display: inline-block;
-}
-
-/*****************Responsive Carrusel**********************/
-@media only screen and (min-width: 600px) {
-}
-
 /**********Div categoria*************/
-
-.categoria {
-  text-align:center;
-}
+  .categoria {
+    text-align:center;
+  }
 
 .ocultos {
-  display:none;
+    display:none;
+  }
+
+  .mostrar {
+    display:block;
+  }
+
+  .contenedorCategorias {
+    justify-content: center;
+    padding-top: 5%;
+  }
+
+
+/*******Estilo de la memoria***********/
+  :root {
+    --w: calc(30vw / 3);
+    --h: calc(40vh / 2);
 }
 
-.mostrar {
-  display:block;
+* {
+    transition: all 0.5s;
 }
 
-.contenedorCategorias {
-  justify-content: center;
-  padding-top: 5%;
+
+
+div {
+    display: inline-block;
+}
+
+.area-tarjeta,
+.tarjeta,
+.cara {
+    cursor: pointer;
+    width: var(--w);
+    min-width: 100px;
+    height: var(--h);
+}
+
+.tarjeta {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: iniciar 5s;
+}
+
+.cara {
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: inset 0 0 0 5px white;
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trasera {
+    background-color: lightcyan;
+    transform: rotateY(180deg);
+}
+
+.superior {
+    background: linear-gradient(orange, darkorange);
+}
+
+.nuevo-juego {
+    cursor: pointer;
+    background: linear-gradient(orange, darkorange);
+    padding: 20px;
+    border-radius: 50px;
+    border: white 5px solid;
+    font-size: 130%;
+}
+
+@keyframes iniciar {
+
+    20%,
+    90% {
+        transform: rotateY(180deg);
+    }
+
+    0%,
+    100% {
+        transform: rotateY(0deg);
+    }
 }
