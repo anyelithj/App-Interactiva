@@ -197,6 +197,10 @@ div {
     display: inline-block;
 }
 
+.center{
+    text-align: center;
+}
+
 .area-tarjeta,
 .tarjeta,
 .cara {
