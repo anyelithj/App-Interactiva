@@ -89,6 +89,27 @@ body {
   .gallery li {
     display: inline-block;
   }
+
+
+  /**********Div categoria*************/
+  .categoria {
+    text-align:center;
+  }
+
+.ocultos {
+    display:none;
+  }
+
+  .mostrar {
+    display:block;
+  }
+
+  .contenedorCategorias {
+    justify-content: center;
+    padding-top: 15%;
+  }
+
+
 /*****************Responsive Carrusel**********************/
 @media (min-width: 576px) {
   .contenedor{
@@ -105,6 +126,11 @@ body {
 .carrusel img {
   width: 250px;
   height: 170px;
+}
+
+.contenedorCategorias {
+  justify-content: center;
+  padding-top: 15%;
 }
 
 }
@@ -124,6 +150,12 @@ body {
   width: 530px;
   height: 230px;
 }
+
+.contenedorCategorias {
+  justify-content: center;
+  padding-top: 15%;
+}
+
 }
 @media (min-width: 992px) {
   .contenedor{
@@ -140,24 +172,13 @@ body {
     width: 530px;
     height: 230px;
   }
-}
-/**********Div categoria*************/
-  .categoria {
-    text-align:center;
-  }
-
-.ocultos {
-    display:none;
-  }
-
-  .mostrar {
-    display:block;
-  }
 
   .contenedorCategorias {
     justify-content: center;
     padding-top: 5%;
   }
+}
+
 
 
 /*******Estilo de la memoria***********/
@@ -207,12 +228,12 @@ div {
 }
 
 .superior {
-    background: linear-gradient(orange, darkorange);
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
 }
 
 .nuevo-juego {
     cursor: pointer;
-    background: linear-gradient(orange, darkorange);
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
     padding: 20px;
     border-radius: 50px;
     border: white 5px solid;

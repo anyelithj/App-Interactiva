@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Interactiva</title>
-    <link href="/Styles/Style.css" rel="stylesheet">
+    <title>Prototipo</title>
+    <link href="Styles/Style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" />
+    <script src="https://site-assets.fontawesome.com/releases/v6.1.1/js/all.js" data-auto-add-css="false" data-auto-replace-svg="false"></script>
 </head>
+
 <body>
-    <nav class="navbar fixed-top navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top border-bottom classNav">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="./img/image.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            <img src="/img/image.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
             Interactive App
+          </a>
+          <a  href="javascript:location.reload()">
+            <i class="fa-solid fa-house"></i>
           </a>
         </div>
       </nav>
@@ -30,14 +36,24 @@
     <button class="arrow next">⇨</button>
   </div>
 </div>
-
+ 
 <!--Categorias-->
 <div id="animals" class="contenedorCategorias ocultos">
   <h3 class="categoria">Animals</h3>
+  <div id="tablero"></div>
+  <br>
+  <div class="nuevo-juego" id="Buttontablero" onclick="">
+      New Game
+  </div>
 </div>
 
 <div id="food" class="contenedorCategorias ocultos">
   <h3 class="categoria">Food</h3>
+  <div id="tablero2"></div>
+  <br>
+  <div class="nuevo-juego" id="Buttontablerofood" onclick="">
+      New Game
+  </div>
 </div>
 
 <div id="quiz" class="contenedorCategorias ocultos">
@@ -46,7 +62,9 @@
 
 <div id="family" class="contenedorCategorias ocultos">
   <h3 class="categoria">Family</h3>
+</div>
 
-<script src="/JS/index.js" type="module"></script>
+
+ <script src="JS/index.js" type="module"></script>
 </body>
 </html>

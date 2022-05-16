@@ -22,7 +22,7 @@ carrusel.querySelector('.prev').onclick = function() {
   if(width <= 250){
     count = 1;
   }else{
-    count = 2; // conteo de las imágenes visibles
+    count = 2;
   }
   // desplazamiento izquierdo
   position += width * count;
@@ -37,11 +37,12 @@ carrusel.querySelector('.next').onclick = function() {
   if(width <= 250){
     count = 1;
   }else{
-    count = 2; // conteo de las imágenes visibles
+    count = 2;
   }
   // desplazamiento derecho
   position -= width * count;
-  // solo se puede desplazar el carrete de imágenes (longitud total de la cinta - conteo visibles)
+
+  // (longitud total de la cinta - conteo visibles)
   position = Math.max(position, -width * (listElems.length - count));
   list.style.marginLeft = position + 'px';
 };
