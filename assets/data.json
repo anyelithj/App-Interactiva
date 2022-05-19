@@ -1,0 +1,100 @@
+{
+  "categoria": [
+    {
+      "id": 1,
+      "name": "animals",
+      "img": "img/animals.jpg"
+    },
+    {
+      "id": 2,
+      "name": "food",
+      "img": "img/food.jpg"
+    },
+    {
+      "id": 3,
+      "name": "quiz",
+      "img": "img/quiz.jpg"
+    },
+    {
+      "id": 4,
+      "name": "family",
+      "img": "img/family.jpg"
+    }
+  ],
+  "animals": [
+    {
+      "name": "dog",
+      "img": "img/dog.jpg"
+    },
+    {
+      "name": "cat",
+      "img": "img/cat.jpg"
+    },
+    {
+      "name": "cow",
+      "img": "img/cow.jpg"
+    },
+    {
+      "name": "lion",
+      "img": "img/lion.jpg"
+    },
+    {
+      "name": "monkey",
+      "img": "img/monkey.jpg"
+    },
+    {
+      "name": "turtle",
+      "img": "img/turtle.jpg"
+    },
+    {
+      "name": "bear",
+      "img": "img/bear.jpg"
+    },
+    {
+      "name": "snake",
+      "img": "img/snake.jpg"
+    },
+    {
+      "name": "pig",
+      "img": "img/pig.jpg"
+    }
+  ],    
+  "food": [
+    {
+      "name": "salad",
+      "img": "img/salad.jpg"
+    },
+    {
+      "name": "cookie",
+      "img": "img/cookie.jpg"
+    },
+    {
+      "name": "chicken",
+      "img": "img/chicken.jpg"
+    },
+    {
+      "name": "rice",
+      "img": "img/rice.jpg"
+    },
+    {
+      "name": "egg",
+      "img": "img/egg.jpg"
+    },
+    {
+      "name": "soup",
+      "img": "img/soup.jpg"
+    },
+    {
+      "name": "sandwich",
+      "img": "img/sandwich.jpg"
+    },
+    {
+      "name": "cereal",
+      "img": "img/cereal.jpg"
+    },
+    {
+      "name": "spinach",
+      "img": "img/spinach.jpg"
+    }
+  ]
+}
