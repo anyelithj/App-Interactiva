@@ -41,7 +41,6 @@ carrusel.querySelector('.next').onclick = function() {
   }
   // desplazamiento derecho
   position -= width * count;
-
   // (longitud total de la cinta - conteo visibles)
   position = Math.max(position, -width * (listElems.length - count));
   list.style.marginLeft = position + 'px';

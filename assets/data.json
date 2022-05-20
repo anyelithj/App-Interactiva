@@ -96,5 +96,43 @@
       "name": "spinach",
       "img": "img/spinach.jpg"
     }
+  ],
+  "family": [
+    {
+      "name": "sister",
+      "img": "img/sister.jpg"
+    },
+    {
+      "name": "uncle",
+      "img": "img/uncle.jpg"
+    },
+    {
+      "name": "aunt",
+      "img": "img/aunt.jpg"
+    },
+    {
+      "name": "brother",
+      "img": "img/brother.jpg"
+    },
+    {
+      "name": "cousin",
+      "img": "img/cousin.jpg"
+    },
+    {
+      "name": "daughter",
+      "img": "img/daughter.jpg"
+    },
+    {
+      "name": "grandmother",
+      "img": "img/grandmother.jpg"
+    },
+    {
+      "name": "father",
+      "img": "img/father.jpg"
+    },
+    {
+      "name": "baby_sister",
+      "img": "img/baby_sister.jpg"
+    }
   ]
 }
