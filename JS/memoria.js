@@ -1,10 +1,11 @@
 
-import {cargarIconos,cargarIconosfood} from "./index.js"
+import {cargarIconos,cargarIconosfood,cargarIconosfamily} from "./index.js"
 
 let selecciones = []
 let len;
 let tablero = document.getElementById("tablero")
 let tablero2 = document.getElementById("tablero2")
+let tablero3 = document.getElementById("tablero3")
 
 function generarTablero(iconos,typetablero) {
     cargarIconos()
@@ -32,6 +33,20 @@ function generarTablero2(iconosfood,typetablero) {
     }
     tarjetas2.sort(() => Math.random() - 0.5)
     generartableroTodos(tarjetas2,typetablero)
+}
+
+function generarTablero3(iconosfamily,typetablero) {
+    cargarIconosfamily()
+    len = iconosfamily.length
+    let tarjetas3 = []
+    for (let i = 0; i < len*2; i++) {
+        tarjetas3.push(iconosfamily[0])
+        if (i % 2 == 1) {
+            iconosfamily.splice(0, 1)
+        }
+    }
+    tarjetas3.sort(() => Math.random() - 0.5)
+    generartableroTodos(tarjetas3,typetablero)
 }
 
 
@@ -74,8 +89,10 @@ function generartableroTodos(tarjetas,typetablero){
 
         if(typetablero == 'tablero1'){
             tablero.appendChild(div)
-        }else{
+        }else if(typetablero == 'tablero2'){
             tablero2.appendChild(div)
+        }else{
+            tablero3.appendChild(div)
         }
         
     }
@@ -112,4 +129,4 @@ function deseleccionar(selecciones) {
 }
 
 
-export {generarTablero,generarTablero2}
+export {generarTablero,generarTablero2,generarTablero3}

@@ -1,13 +1,14 @@
 
 import {createElements } from "./carrusel.js"
 import {categorias} from "./categorias.js"
-import {generarTablero,generarTablero2} from "./memoria.js"
+import {generarTablero,generarTablero2,generarTablero3} from "./memoria.js"
 
 let elementsLi = [];
 let divCarrusel = document.getElementById("carouselContenedor");
 let ul = document.getElementById("listaCategorias");
 let iconos = []
 let iconosfood = []
+let iconosfamily = []
 
 
 /************Elementos Memoria animals******************* */
@@ -33,6 +34,18 @@ function cargarIconosfood() {
 })
 }
 
+/************Elementos Memoria family******************* */
+function cargarIconosfamily() {
+  fetch('http://localhost:3000/family')
+.then(response => response.json())  // convertir a json
+.then(function(data) {
+  console.log('data',data);
+  data.forEach(id => {
+    iconosfamily.push(id.img)
+  })
+})
+}
+
 /************Elementos Categoria******************* */
 fetch('http://localhost:3000/categoria')
 .then(response => response.json())  // convertir a json
@@ -45,7 +58,7 @@ fetch('http://localhost:3000/categoria')
     li.style.position = 'relative';
     const a = document.createElement('a')
     a.setAttribute('href','#')
-    a.onclick = function(){categorias(divCarrusel,name.name,iconos,iconosfood)}
+    a.onclick = function(){categorias(divCarrusel,name.name,iconos,iconosfood,iconosfamily)}
     const img = document.createElement('img')
     img.setAttribute('id',name.id)
     img.setAttribute('src','/'+name.img)
@@ -68,4 +81,8 @@ const botonfood = document.getElementById('Buttontablerofood')
 botonfood.onclick = function(){generarTablero2(iconosfood,'tablero2')}
 generarTablero2(iconosfood,'tablero2')
 
-export {cargarIconos,cargarIconosfood}
+const botonfamily = document.getElementById('Buttontablerofamily')
+botonfamily.onclick = function(){generarTablero3(iconosfamily,'tablero3')}
+generarTablero3(iconosfamily,'tablero3')
+
+export {cargarIconos,cargarIconosfood,cargarIconosfamily}

@@ -3,7 +3,7 @@ import {generarTablero,generarTablero2} from "./memoria.js"
 
 let elementoCategoria;
 
-function categorias(divCarrusel,id,iconos,iconosfood) {
+function categorias(divCarrusel,id,iconos,iconosfood,iconosfamily) {
 
     divCarrusel.style.display = "none";
     elementoCategoria = document.getElementById(id);
@@ -13,6 +13,8 @@ function categorias(divCarrusel,id,iconos,iconosfood) {
         generarTablero(iconos,'tablero1')
     }else if(id == 'food'){
         generarTablero2(iconosfood,'tablero2')
+    }else if(id == 'family'){
+        generarTablero2(iconosfamily,'tablero3')
     }
 }
 
