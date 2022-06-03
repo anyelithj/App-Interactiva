@@ -115,6 +115,7 @@
       "img": "img/brother.jpg"
     },
     {
+<<<<<<< HEAD
       "name": "grandmotheer",
       "img": "img/grandmother.jpg"
     },
@@ -133,6 +134,26 @@
     {
       "name": "pig",
       "img": "img/pig.jpg"
+=======
+      "name": "cousin",
+      "img": "img/cousin.jpg"
+    },
+    {
+      "name": "daughter",
+      "img": "img/daughter.jpg"
+    },
+    {
+      "name": "grandmother",
+      "img": "img/grandmother.jpg"
+    },
+    {
+      "name": "father",
+      "img": "img/father.jpg"
+    },
+    {
+      "name": "baby_sister",
+      "img": "img/baby_sister.jpg"
+>>>>>>> develop
     }
   ]
 }
